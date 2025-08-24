@@ -94,3 +94,25 @@ print(greeting)
 # This is much better! The leading "f" informs Python that it will need to look for curly braces {}
 #	and run any of the code within them. When it's done, the result is a string with the data inserted
 #	at the location of the braces. Isn't that neat!
+
+# When we write programs, most often we work with data that is given to our program as input from people
+#   using our program. This also makes our programs more interesting! Python has a very convenient function
+#   named input() to get data that a user types in using their keyboard while the program is running.
+
+user_text = input()
+
+# You probably noticed that the program just kind of...stopped. Well, input() make the program wait until a
+#   user finishes typing in their data and presses the ENTER key.
+
+print(user_text)
+
+# While this works, it isn't very clear what or even when something should be typed in! Let's fix that!
+
+username = input("Enter your name: ")
+
+# Cool! When we put a string as an argument to the input() function, we get our request for data to include
+#   instructions for our user. Now users see that an action is required from them, and what information is needed
+
+print(f"Hiya {username}, thanks for the data!")
+
+# What if we wanted something other than a string...we'll talk about that when we discuss numbers next time. :)
