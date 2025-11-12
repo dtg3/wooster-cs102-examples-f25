@@ -21,6 +21,10 @@ def on_mouse_down(pos):
         alien.image = 'alien_drag'
         alien.dragging = True
         mouse_x, mouse_y = pos
+        # x and y of an Actor (by default) is our top left
+        # of the image this is why where the mouse is on
+        # the image will always result in a subtraction as
+        # the mouse x,y will always be the bigger value.
         alien.offset_x = mouse_x - alien.x
         alien.offset_y = mouse_y - alien.y
 
@@ -33,6 +37,8 @@ def on_mouse_move(pos):
     global alien
     if alien.dragging:
         mouse_x, mouse_y = pos
+        # Reposition the alient with respect to where the
+        # mouse has "grabbed" the image.
         alien.x = mouse_x - alien.offset_x
         alien.y = mouse_y - alien.offset_y
     
